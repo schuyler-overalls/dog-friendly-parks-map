@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_47c708f2f9691ed32f7e903f0c617dc2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+ position: fixed; bottom: 14px; left: 14px; z-index: 9999;
+ background: rgba(255,255,255,.95); padding: 8px 10px; border-radius: 6px;
+ font-family: sans-serif; font-size: 13px; box-shadow: 0 1px 6px rgba(0,0,0,.15);">
+  <b>Drive-time Legend</b><br>
+  🟩 1–10 min<br>
+  🟨 11–15 min<br>
+  🟧 16–20 min<br>
+  🟥 21–25 min
+</div>
+    
+            <div class="folium-map" id="map_47c708f2f9691ed32f7e903f0c617dc2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_47c708f2f9691ed32f7e903f0c617dc2 = L.map(
+                "map_47c708f2f9691ed32f7e903f0c617dc2",
+                {
+                    center: [42.075, -72.07],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_df37638722e3a65ce9dd04d356ed5afa = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_df37638722e3a65ce9dd04d356ed5afa.addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+            var circle_marker_be1a650f3f39ec4257365c32e2ab2c36 = L.circleMarker(
+                [42.07278, -72.06278],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_0b8710e65cad59679a46c8282ce6465b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ce95a00686c2e050abacc35a026ff4d2 = $(`<div id="html_ce95a00686c2e050abacc35a026ff4d2" style="width: 100.0%; height: 100.0%;"><b>Westville Recreation Area (USACE)</b><br>9 min drive<br><a href='https://www.nae.usace.army.mil/Missions/Recreation/Westville-Lake/' target='_blank'>Open details</a></div>`)[0];
+                popup_0b8710e65cad59679a46c8282ce6465b.setContent(html_ce95a00686c2e050abacc35a026ff4d2);
+            
+        
+
+        circle_marker_be1a650f3f39ec4257365c32e2ab2c36.bindPopup(popup_0b8710e65cad59679a46c8282ce6465b)
+        ;
+
+        
+    
+    
+            var circle_marker_b6423d1fcc409e992f20b03c8ea7ecd2 = L.circleMarker(
+                [42.0709, -72.0645],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_2622a621a5287be57a98a1416b4c845c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bab2bf17ad43b9a89c7c03021f6fdf57 = $(`<div id="html_bab2bf17ad43b9a89c7c03021f6fdf57" style="width: 100.0%; height: 100.0%;"><b>Grand Trunk Trail – Westville/Marjorie Ln</b><br>10 min drive<br><a href='https://www.treksturbridge.org/grand-trunk-trail' target='_blank'>Open details</a></div>`)[0];
+                popup_2622a621a5287be57a98a1416b4c845c.setContent(html_bab2bf17ad43b9a89c7c03021f6fdf57);
+            
+        
+
+        circle_marker_b6423d1fcc409e992f20b03c8ea7ecd2.bindPopup(popup_2622a621a5287be57a98a1416b4c845c)
+        ;
+
+        
+    
+    
+            var circle_marker_aaec13f5f808733f75661d7865199616 = L.circleMarker(
+                [42.06856, -72.02764],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_a964f7f6b52c92c743abcc2a892d1119 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_becef57449574858e65478bd240e1064 = $(`<div id="html_becef57449574858e65478bd240e1064" style="width: 100.0%; height: 100.0%;"><b>Cole Forest (Southbridge)</b><br>9 min drive<br><a href='https://www.ci.southbridge.ma.us/381/Trail-Committee' target='_blank'>Open details</a></div>`)[0];
+                popup_a964f7f6b52c92c743abcc2a892d1119.setContent(html_becef57449574858e65478bd240e1064);
+            
+        
+
+        circle_marker_aaec13f5f808733f75661d7865199616.bindPopup(popup_a964f7f6b52c92c743abcc2a892d1119)
+        ;
+
+        
+    
+    
+            var circle_marker_cb8d4109849ac2df09756f975223d7be = L.circleMarker(
+                [42.0837, -72.0453],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_ca355ce30abd932517a8b524c2451103 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_aeaa0f79a1a342e8e35896b993a07457 = $(`<div id="html_aeaa0f79a1a342e8e35896b993a07457" style="width: 100.0%; height: 100.0%;"><b>McKinstry Brook WMA (Plimpton St TH)</b><br>10 min drive<br><a href='https://thelastgreenvalley.org/member-directory/mckinstry-brook-wildlife-management-area/' target='_blank'>Open details</a></div>`)[0];
+                popup_ca355ce30abd932517a8b524c2451103.setContent(html_aeaa0f79a1a342e8e35896b993a07457);
+            
+        
+
+        circle_marker_cb8d4109849ac2df09756f975223d7be.bindPopup(popup_ca355ce30abd932517a8b524c2451103)
+        ;
+
+        
+    
+    
+            var circle_marker_e86b5533b6051544f822ba20ee93ccbc = L.circleMarker(
+                [42.1099, -72.0404],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_cdcf9991803b16760b99c0d63ff5b27f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9712672ee22371920f5374c231148f34 = $(`<div id="html_9712672ee22371920f5374c231148f34" style="width: 100.0%; height: 100.0%;"><b>Opacum Woods (Old Brook Cir TH)</b><br>13 min drive<br><a href='https://www.opacumlt.org/properties/opacum-woods/' target='_blank'>Open details</a></div>`)[0];
+                popup_cdcf9991803b16760b99c0d63ff5b27f.setContent(html_9712672ee22371920f5374c231148f34);
+            
+        
+
+        circle_marker_e86b5533b6051544f822ba20ee93ccbc.bindPopup(popup_cdcf9991803b16760b99c0d63ff5b27f)
+        ;
+
+        
+    
+    
+            var circle_marker_a43f531b19c230d579bc8a3008dd0b1f = L.circleMarker(
+                [42.0968, -72.0844],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_9d209ae1de0e8f08e9fc90e4681bb5ab = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_343666b02a8febb3ab34fdcc24bede65 = $(`<div id="html_343666b02a8febb3ab34fdcc24bede65" style="width: 100.0%; height: 100.0%;"><b>Sturbridge Riverlands (lower loop area)</b><br>13 min drive<br><a href='https://www.treksturbridge.org/riverlands' target='_blank'>Open details</a></div>`)[0];
+                popup_9d209ae1de0e8f08e9fc90e4681bb5ab.setContent(html_343666b02a8febb3ab34fdcc24bede65);
+            
+        
+
+        circle_marker_a43f531b19c230d579bc8a3008dd0b1f.bindPopup(popup_9d209ae1de0e8f08e9fc90e4681bb5ab)
+        ;
+
+        
+    
+    
+            var circle_marker_e197b3f7c035f0d141fd6bd77075b188 = L.circleMarker(
+                [42.0948, -72.0814],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_a0a3b2a115ab18afab461e462dbfc59a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d85e590d9d5004efa1e1ffa46939d4c1 = $(`<div id="html_d85e590d9d5004efa1e1ffa46939d4c1" style="width: 100.0%; height: 100.0%;"><b>Leadmine Mountain (197 Leadmine Rd lot)</b><br>13 min drive<br><a href='https://www.treksturbridge.org/leadmine-mountain' target='_blank'>Open details</a></div>`)[0];
+                popup_a0a3b2a115ab18afab461e462dbfc59a.setContent(html_d85e590d9d5004efa1e1ffa46939d4c1);
+            
+        
+
+        circle_marker_e197b3f7c035f0d141fd6bd77075b188.bindPopup(popup_a0a3b2a115ab18afab461e462dbfc59a)
+        ;
+
+        
+    
+    
+            var circle_marker_646f8bb5b2530fd399f2575421730d20 = L.circleMarker(
+                [42.1006, -72.0749],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_333be1cfb5fdbf91b64ec74a101007b1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3bae7476321d0bc29cd7d3774f30bbaa = $(`<div id="html_3bae7476321d0bc29cd7d3774f30bbaa" style="width: 100.0%; height: 100.0%;"><b>Heins Farm (197 Leadmine Rd lot)</b><br>13 min drive<br><a href='https://www.treksturbridge.org/heins-farm' target='_blank'>Open details</a></div>`)[0];
+                popup_333be1cfb5fdbf91b64ec74a101007b1.setContent(html_3bae7476321d0bc29cd7d3774f30bbaa);
+            
+        
+
+        circle_marker_646f8bb5b2530fd399f2575421730d20.bindPopup(popup_333be1cfb5fdbf91b64ec74a101007b1)
+        ;
+
+        
+    
+    
+            var circle_marker_a5a89f853174c741ae0e0f9c07d7b0b4 = L.circleMarker(
+                [42.0989, -72.0779],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_7755c54b7aaafea4965c6566895af1db = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b004dbd844284dfb9b189f583d06c3de = $(`<div id="html_b004dbd844284dfb9b189f583d06c3de" style="width: 100.0%; height: 100.0%;"><b>Grand Trunk Trail – US-20 access</b><br>12 min drive<br><a href='https://www.treksturbridge.org/grand-trunk-trail' target='_blank'>Open details</a></div>`)[0];
+                popup_7755c54b7aaafea4965c6566895af1db.setContent(html_b004dbd844284dfb9b189f583d06c3de);
+            
+        
+
+        circle_marker_a5a89f853174c741ae0e0f9c07d7b0b4.bindPopup(popup_7755c54b7aaafea4965c6566895af1db)
+        ;
+
+        
+    
+    
+            var circle_marker_cbcf819e2ff8093fca661098c2951984 = L.circleMarker(
+                [42.146991, -72.060712],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_b074e7caa87bbdc64a885b62f32960f8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_df2612596da9f3840f805214b91ac7e6 = $(`<div id="html_df2612596da9f3840f805214b91ac7e6" style="width: 100.0%; height: 100.0%;"><b>Wells State Park (DCR)</b><br>15 min drive<br><a href='https://www.mass.gov/locations/wells-state-park' target='_blank'>Open details</a></div>`)[0];
+                popup_b074e7caa87bbdc64a885b62f32960f8.setContent(html_df2612596da9f3840f805214b91ac7e6);
+            
+        
+
+        circle_marker_cbcf819e2ff8093fca661098c2951984.bindPopup(popup_b074e7caa87bbdc64a885b62f32960f8)
+        ;
+
+        
+    
+    
+            var circle_marker_8f5ac7d179a3cff2edfd39c16624b92a = L.circleMarker(
+                [42.1249, -71.9958],
+                {"bubblingMouseEvents": true, "color": "darkorange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkorange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_445ce212d73c9c028651e762561115ae = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c1050dad9a09b7c3793d1d86dcce8511 = $(`<div id="html_c1050dad9a09b7c3793d1d86dcce8511" style="width: 100.0%; height: 100.0%;"><b>Buffumville Lake (USACE, main day-use)</b><br>19 min drive<br><a href='https://www.nae.usace.army.mil/Missions/Recreation/Buffumville-Lake/' target='_blank'>Open details</a></div>`)[0];
+                popup_445ce212d73c9c028651e762561115ae.setContent(html_c1050dad9a09b7c3793d1d86dcce8511);
+            
+        
+
+        circle_marker_8f5ac7d179a3cff2edfd39c16624b92a.bindPopup(popup_445ce212d73c9c028651e762561115ae)
+        ;
+
+        
+    
+    
+            var circle_marker_1b34cd8effee4a4e2cb96c4850f584ea = L.circleMarker(
+                [42.1064, -72.1778],
+                {"bubblingMouseEvents": true, "color": "darkorange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkorange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_eba29590a8403d6c7a51238650c248b3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_017e2a4917715e1ee8cd066e1ed98740 = $(`<div id="html_017e2a4917715e1ee8cd066e1ed98740" style="width: 100.0%; height: 100.0%;"><b>Brimfield State Forest – Dean Pond</b><br>19 min drive<br><a href='https://www.mass.gov/doc/brimfield-state-forest' target='_blank'>Open details</a></div>`)[0];
+                popup_eba29590a8403d6c7a51238650c248b3.setContent(html_017e2a4917715e1ee8cd066e1ed98740);
+            
+        
+
+        circle_marker_1b34cd8effee4a4e2cb96c4850f584ea.bindPopup(popup_eba29590a8403d6c7a51238650c248b3)
+        ;
+
+        
+    
+    
+            var circle_marker_b90af321a3c31288c98e16345da74c77 = L.circleMarker(
+                [41.9867, -71.8815],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_47c708f2f9691ed32f7e903f0c617dc2);
+        
+    
+        var popup_76fb9eb46ad900f076b5a0c00ccfb174 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_66bab1245a4e1c8696b28761deda07d1 = $(`<div id="html_66bab1245a4e1c8696b28761deda07d1" style="width: 100.0%; height: 100.0%;"><b>West Thompson Lake (USACE, CT)</b><br>23 min drive<br><a href='https://www.nae.usace.army.mil/Missions/Recreation/West-Thompson-Lake/' target='_blank'>Open details</a></div>`)[0];
+                popup_76fb9eb46ad900f076b5a0c00ccfb174.setContent(html_66bab1245a4e1c8696b28761deda07d1);
+            
+        
+
+        circle_marker_b90af321a3c31288c98e16345da74c77.bindPopup(popup_76fb9eb46ad900f076b5a0c00ccfb174)
+        ;
+
+        
+    
+</script>
+</html>
